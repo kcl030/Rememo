@@ -23,14 +23,18 @@
 
       <div class="row">
 
-        <div class="col-4">
+        <div class="col-2">
         </div>
         <div id="emptyJournal" class="col-6">
 
         </div>
         <div class="col-2">
         </div>
-    </div>
+      </div>
+      <div class="row">
+        <div id= "above" class="col-12">
+        </div>
+      </div>
   </div>
 
     <!-- Journal Items -->
@@ -65,9 +69,9 @@
 
             var Container = document.createElement('div');
             Container.className = 'container';
-
+            Container.style = 'border:1px solid #FFFFFF; background: #ffe6e6; margin: 0px 0px 10px 0px';
             var InfoCol = document.createElement('div');
-            InfoCol.className = 'xs col-8';
+            InfoCol.className = 'xs col-12';
 
             var newJTask = document.createElement('li');
             newJTask.className = "task";
@@ -75,7 +79,7 @@
             newJTask.Id = JournalArray[t];
             InfoCol.appendChild(newJTask);
             Container.appendChild(InfoCol);
-            document.body.appendChild(Container)
+            above.appendChild(Container)
           }
 
           // Create a "close" button and append it to each list item

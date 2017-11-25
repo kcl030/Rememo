@@ -7,6 +7,16 @@
     <meta name="author" content="">
     <link rel="stylesheet" href="css/bootstrap.css"/>
     <title>ReMemo MyTasks</title>
+    <style>
+      label{
+      display:inline-block;
+      width:150px;
+      }
+      input{
+      display:inline-block;
+      justify-content: flex-end;
+      }
+    </style>
   <head>
 
   <body style="background-color: #6fc3df;">
@@ -27,7 +37,7 @@
         <td bgcolor="#FFFFFF" style="line-height:10px;" colspan=3>&nbsp;</td>
       </div>
 
-			<div class="row">
+			<div class="row"  id = "above">
 				<script>
 					//function append ( elString, parent ) {
 						//var div = document.createElement( "p" );
@@ -42,9 +52,9 @@
 					for(var t in TaskArray1){
 						var Container = document.createElement('div');
 						Container.className = 'container';
-
+            Container.style = 'border:1px solid #FFFFFF; background: #c5e8ec; margin: 0px 00px 10px 0px';
 						var InfoCol = document.createElement('div');
-						InfoCol.className = 'xs col-8';
+						InfoCol.className = 'xs col-12';
 
 						var newTaskElement = document.createElement('li');
 						newTaskElement.className = "task";
@@ -53,7 +63,8 @@
 
 						InfoCol.appendChild(newTaskElement);
 						Container.appendChild(InfoCol);
-						document.body.appendChild(Container)
+						document.body.appendChild(Container);
+            above.appendChild(Container);
 					}
 
 					// Create a "close" button and append it to each list item
@@ -126,9 +137,9 @@
     <div id="addTask" class="modal fade" role="dialog">
       <div class="modal-dialog">
         <!-- Modal content-->
-        <div class="modal-content">
+        <div class="modal-content" style="background-color: #c5e8ec;">
           <div class="modal-body">
-            <h1>Add Task</h1>
+            <h1 style="font-family: 'Cedarville Cursive', cursive; font-size: 40px; margin: 0 auto;"><center>Add Task</center></h1>
 						<form id="addTask" action="/myTask.html">
   						<label>I need to: <br> </label><input type="text" name="newTask" id="newTask"> <br>
               <label>Time (ex. 2:30pm): <br> </label><input type="text" name="time" id = "time">
