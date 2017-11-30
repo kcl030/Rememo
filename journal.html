@@ -41,6 +41,22 @@
       </div>
   </div>
 
+  <!-- Modal for clearing journal entries-->
+  <div id="clearTask" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content" style="background-color: #ffe6e6;">
+        <div class="modal-body">
+          <h1>Are you sure you want to clear all journal entries?</h1>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" onclick="removeAll();">Yes</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
     <!-- Journal Items -->
     <div class="container">
       <div class="row">
@@ -133,7 +149,7 @@
         <div class="col-1">
         </div>
         <div class="col-10">
-            <center><button id="ClearTaskbutton" type="button" class="btn btn-default btn-custom-block" data-toggle="modal" onclick="removeAll()">Clear All</button><center>
+            <center><button id="ClearTaskbutton" type="button" class="btn btn-default btn-custom-block" data-toggle="modal" data-target="#clearTask">Clear All</button><center>
         <div class="col-1">
         </div>
       </div>

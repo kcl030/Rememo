@@ -112,8 +112,6 @@
 					</script>
 				</div>
 
-
-
 			<!-- Handlebars template for tasks
 				<script id="task-template" type="text/x-handlebars-template">
 					<div class="tasks">
@@ -128,7 +126,7 @@
 			<div class="row">
           <button id="AddTaskbutton" type="button" class="btn btn-default btn-custom-block" data-toggle="modal" data-target="#addTask">Add Task</button>
           <td bgcolor="#FFFFFF" style="line-width:5px;" colspan=3>&nbsp;</td>
-          <button id="ClearTaskbutton" type="button" class="btn btn-default btn-custom-block" data-toggle="modal" onclick="removeAll()">Clear All</button>
+          <button id="ClearTaskbutton" type="button" class="btn btn-default btn-custom-block" data-toggle="modal" data-target="#clearTask">Clear All</button>
       </div>
 
 		</div>
@@ -153,6 +151,22 @@
         </div>
       </div>
 		</div>
+
+    <!-- Modal for clearing task-->
+    <div id="clearTask" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content" style="background-color: #D6EAF8;">
+          <div class="modal-body">
+            <h1>Are you sure you want to clear all tasks?</h1>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" onclick="removeAll();">Yes</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
 			<!-- storing and removing tasks -->
 			<script>
@@ -187,6 +201,7 @@
 					}
 				}
 
+        //remove all tasks
 				function removeAll() {
 
           var otherArray = localStorage.getItem("DeletedArray");
@@ -208,7 +223,6 @@
 					localStorage.setItem("localArray", null);
 					location.reload();
 				}
-
 			</script>
 
 
