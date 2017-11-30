@@ -182,8 +182,9 @@
 					var taskToAdd = StringToAdd + document.getElementById("newTask").value;
           taskToAdd = taskToAdd + " at ";
           taskToAdd = taskToAdd + document.getElementById("time").value;
-					if (document.getElementById("newTask").value.length == 0) {
-						alert("Please enter a task");
+					if (document.getElementById("newTask").value.length == 0 ||
+              document.getElementById("time").value.length == 0) {
+						alert("Please enter a task and a time");
 						return 0;
 					}
 					taskArray.push(taskToAdd);
