@@ -23,12 +23,8 @@
     </div>
     <!--Appears if MyTask is empty -->
     <div class="container">
-      <div class="row">
-        <div class="col-4">
+        <div id="emptyTasks" style= 'border:1px solid #FFFFFF; background:  #f2ccff; margin: 0px 00px 10px 0px'>
         </div>
-        <div id="emptyTasks" class="col-4">
-        </div>
-      </div>
     </div>
 
     <!-- Quiz answers are buttons with modals-->
@@ -63,11 +59,11 @@
     <div id="correctAnswer" class="modal fade" role="dialog">
       <div class="modal-dialog">
         <!-- Modal content-->
-        <div class="modal-content" style="background-color: #F5EEF8;">
+        <div class="modal-content" style="background-color: #f2ccff">
           <div class="modal-body">
             <h1>You have fantastic memory!</h1>
           </div>
-          <div class="modal-footer">
+          <div class="modal-footer" style="background-color: #f2ccff">
             <button type="button" class="btn btn-default" data-dismiss="modal" onclick="window.location.href='index.html'">Close</button>
           </div>
         </div>
@@ -79,11 +75,11 @@
     <div id="incorrectAnswer" class="modal fade" role="dialog">
       <div class="modal-dialog">
         <!-- Modal content-->
-        <div class="modal-content">
-          <div id="correction" class="modal-body" style="background-color: #F5EEF8;">
+        <div class="modal-content" style="background-color: #f2ccff">
+          <div id="correction" class="modal-body">
             <h1>Yikes you need to improve your memory!</h1>
           </div>
-          <div class="modal-footer" style="background-color: #F5EEF8;">
+          <div class="modal-footer" style="background-color: #f2ccff">
             <button type="button" class="btn btn-default" data-dismiss="modal" onclick="window.location.href='index.html'">Close</button>
           </div>
         </div>
@@ -172,7 +168,7 @@
       $("#buttonC").hide();
       $("#buttonD").hide();
 
-      document.getElementById("emptyTasks").innerHTML = "You need to fill out <strong> My Tasks </strong> to take the quiz.";
+      document.getElementById("emptyTasks").innerHTML = "<center>You need to fill out <strong>My Tasks</strong> to take the quiz.</center>";
     }else{
 
     //ensure no duplicates for random incorrect answers
